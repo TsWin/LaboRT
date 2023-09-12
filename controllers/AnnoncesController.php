@@ -79,7 +79,7 @@ function getVendeurPicture($idetu) {
 
 function getCondition($id) {
     $connex = connectDB();
-    $query = $connex->prepare("SELECT * FROM condition WHERE idcondition = :id");
+    $query = $connex->prepare("SELECT * FROM `condition` WHERE idcondition = :id");
     $query->bindParam(':id', $id);
     $query->execute();
     $condition = $query->fetch();
@@ -88,7 +88,7 @@ function getCondition($id) {
 
 function getEtat($id) {
     $connex = connectDB();
-    $query = $connex->prepare("SELECT * FROM etatAnnonce WHERE idetat = :id");
+    $query = $connex->prepare("SELECT * FROM etatannonce WHERE idetat = :id");
     $query->bindParam(':id', $id);
     $query->execute();
     $etat = $query->fetch();
@@ -97,7 +97,7 @@ function getEtat($id) {
 
 function getEtats() {
     $connex = connectDB();
-    $query = $connex->prepare("SELECT * FROM etatAnnonce");
+    $query = $connex->prepare("SELECT * FROM etatannonce");
     $query->execute();
     $etats = $query->fetchAll();
     return $etats;
