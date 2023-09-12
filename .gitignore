@@ -1,0 +1,10 @@
+# ignore DS_Store files
+.DS_Store
+._.DS_Store
+._*
+*.sql
+*.txt
+
+config.php
+Token_maker.php
+ade_icale

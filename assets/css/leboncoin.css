@@ -1,0 +1,664 @@
+
+@font-face {
+    font-family: 'Mokoto';
+    src: url('../fonts/MokotoFont/MokotoGlitch.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Mokoto', sans-serif;
+    scroll-behavior: smooth;
+    font-size: small;
+}
+
+body {
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+
+}
+
+hr {
+    display: block;
+    margin: 1em 0;
+    color: gray;
+}
+
+header {
+    /* make simple dark header */
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: #000 2px 2px 2px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+    justify-content: space-between;
+    padding: 15px;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+
+}
+
+header .logo {
+    width: auto;
+    height: 6em;
+}
+
+header .menu {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: space-around;
+    top: 0;
+    position: relative;
+    height: 3em;
+    width: 75%;
+}
+
+header .menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: flex-end;
+    margin-right: 2em;
+    position: absolute;
+    width: 100%;
+}
+
+header .menu ul li {
+    margin: 2em;
+}
+
+header .menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0 10px;
+}
+
+header .menu ul li a:hover {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    transition: all 0.5s ease;
+}
+
+.container {
+    display: inline-block;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    /* overflow: auto; */
+    position: relative;
+    /* width: 100%; */
+    height: 100vh;
+    margin-top: 130px;
+}
+
+.articleContainer {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    overflow: auto;
+    position: relative;
+    width: 85%;
+    height: auto;
+    background-color: #fff;
+    margin-bottom: 20em;
+    margin-top: 15em;
+    border-radius: 16px;
+}
+
+.searchContainer {
+    display: flex;
+    flex-direction: column;
+    /* align-self: center; */
+    justify-content: center;
+    overflow: auto;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.profileContainer {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    border-radius: 16px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 75em;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 2em;
+}
+
+.profileImage {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    position: relative;
+    width: 20%;
+    height: 20%;
+    background-color: #fff;
+}
+
+.profileImage img {
+    width: 100%;
+    height: 100%;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* width: 30%; */
+    /* height: 80%; */
+    /* margin-top: 130px; */
+    background-color: #fff;
+    color: #000;
+    border-radius: 16px;
+    margin-top: 5em;
+    margin-bottom: 3em;
+    padding: 2em 4em 2em 4em;
+
+}
+
+.form-group {
+    margin-top: 2em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.form-group label {
+    color: #000;
+}
+
+.form-group input {
+    border-radius: 1.625rem;
+    padding-left: .5em;
+    padding-right: .5em;
+    padding-top: .2em;
+    padding-bottom: .2em;
+}
+.form-group select {
+    border-radius: 1.625rem;
+    padding-left: .5em;
+    padding-right: .5em;
+    padding-top: .2em;
+    padding-bottom: .2em;
+}
+.form-group textarea {
+    border-radius: 16px;
+    padding-left: .5em;
+    padding-right: .5em;
+    padding-top: .2em;
+    padding-bottom: .2em;
+}
+
+.form-group #submit-button {
+    font-family: 'Mokoto', sans-serif;
+    width: 80%;
+    height: 2.5rem;
+    align-self: center;
+}
+
+.searchContainer h1 {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 2em;
+    margin-bottom: 4em;
+}
+
+.button {
+    width: 40%;
+    border-radius: 1.625rem;
+    border: 2px solid #000;
+    outline: none;
+    font-family: 'Mokoto', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #000;
+    cursor: pointer;
+    margin: 1em;
+    padding: 1em;
+    min-height: 4.3em;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.button:hover {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000;
+    transition: all 0.5s ease;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    margin-bottom: 10em;
+    margin-top: 10em;
+    margin-left: 3em;
+    margin-right: 3em;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.searchBar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchBar input {
+    width: 40em;
+    height: 2.8rem;
+    background: #f5f5f5;
+    outline: none;
+    border: none;
+    border-radius: 1.625rem;
+    padding: 0 3.5rem 0 1.5rem;
+    font-size: 1rem;
+}
+
+.searchBar button {
+    width: 3.5rem;
+    height: 2.8rem;
+    margin-left: -3.5rem;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.searchBar button:hover {
+    cursor: pointer;
+}
+
+.annonces {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    position: relative;
+    width: 75%;
+    height: auto;
+    background-color: #fff;
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+.annonce-container {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    margin-bottom: 3em;
+    /* margin-top: 130px; */
+}
+
+.annonce {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    position: relative;
+    width: 80%;
+    height: auto;
+    text-align: center;
+    background-color: #fff;
+    color: #000;
+    border-radius: 16px;
+    margin-top: 130px
+}
+
+.annonce > hr {
+    margin-left: 4em;
+    margin-right: 4em;
+}
+
+.annonces h1 {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    color: #000;
+
+}
+
+.annonce > h2 {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.annonce > p {
+    margin-bottom: 4em;
+}
+
+
+
+.sort {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: space-around;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 1em;
+}
+
+.annonce-body {
+    display: flex;
+    flex-direction: row;
+    margin: 1em;
+    margin-bottom: 4em;
+}
+
+.annonce-body-left {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    margin: 1em;
+}
+
+.annonce-body-left h1 {
+    margin-top: 1em;
+}
+
+.annonce-body-left p {
+    margin-top: 1em;
+}
+
+.annonce-body-left img {
+    width: 100%;
+    height: 80%;
+    max-height: 40em;
+    /* max-width: 50em; */
+    border-radius: 16px;
+    background-color: #000;
+}
+
+.annonce-body-right {
+    display: flex;
+    flex-direction: row;
+    flex: 2;
+    margin: 1em;
+    margin-left: 2em;
+    text-align: left;
+}
+
+.annonce-vendeur {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: space-around;
+    position: relative;
+    width: 80%;
+    height: 50%;
+    margin: 1em;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 1em;
+}
+
+.annonce-vendeur-id {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.annonce-vendeur-id-info {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    height: auto;
+    width: 100%;
+    margin-left: 1.5em;
+}
+
+/* .annonce-vendeur-id-info > p:nth-child(2) {
+    font-size: .8em;
+} */
+
+.annonce-vendeur img {
+    width: 30%;
+    height: 60%;
+}
+
+.annonce-vendeur-btn {
+    align-self: center;
+    position: relative;
+    width: 100%;
+    height: 3em;
+    margin: .2em;
+    border-radius: 16px;
+    text-align: center;
+    font-family: 'Mokoto', sans-serif;
+}
+
+
+.annonce-footer {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 1em;
+}
+
+.annonce-footer-left {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    position: relative;
+    width: 30%;
+    height: 100%;
+    margin: 1em;
+}
+
+.annonce-footer-left p {
+    margin-top: 1em;
+}
+
+.annonce-footer-right {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    position: relative;
+    width: 30%;
+    height: 100%;
+    margin: 1em;
+}
+
+.annonce-footer-right p {
+    margin-top: 1em;
+}
+
+.annonce-item {
+    color: #000;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    height: 50%;
+    margin: 1em;
+    border-radius: 1.625rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+}
+
+.annonce-img {
+    background-color: black;
+    width: 14em;
+    max-height: 14em;
+    border-radius: 1.625rem 0 0 1.625rem;
+}
+.annonce-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1.625rem 0 0 1.625rem;
+}
+
+.annonce-text {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    padding-left: 2em;
+    /* margin: 1em; */
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
+}
+
+.annonce-text-left {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    /* margin: 1em; */
+}
+.annonce-text-left p {
+    font-size: x-small;
+}
+
+.annonce-text-right {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: right;
+    padding-right: 2em;
+    /* margin: 1em; */
+}
+
+.annonce-text-right button {
+    align-self: flex-end;
+    margin-top: 1em;
+    width: 10%;
+    z-index: 1;
+}
+
+.annonce-text-right > p:nth-child(1) {
+    margin-bottom: 1.5em;
+}
+
+.reservation-statut {
+    padding: .5em;
+    border-radius: 16px;
+    text-align: center;
+    width: 100%;
+}
+
+.delete-container {
+    display: flex;
+    flex-direction: column;
+    /* align-self: center; */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 1em;
+}
+
+.delete-button {
+    background-color: #fff;
+    border-radius: 16px;
+    color: #000;
+    padding: .5em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    font-family: 'Mokoto', sans-serif;
+    margin: 1em;
+    cursor: pointer;
+}
+
+.admin-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25em;
+  }
+  
+  .admin-options a {
+    display: inline-block;
+    padding: 1em 2em;
+    margin: 1em;
+    background-color: gray;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .admin-options a:hover {
+    background-color: darkgray;
+  }
+.reservation-statut-select{
+    width: 100%;
+}
