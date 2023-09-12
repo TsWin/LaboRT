@@ -1,7 +1,7 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/config.php';
 function connectDB() {
-    $dsn='pgsql:host='.dbHost.';dbname='.dbName;
+    $dsn='mysql:host='.dbHost.';dbname='.dbName;
     try {
         $connex = new PDO($dsn, dbUser, dbPass);
     } catch (PDOException $e) {
