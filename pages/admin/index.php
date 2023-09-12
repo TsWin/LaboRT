@@ -27,7 +27,7 @@
     <div class="text-box" id="space-top">
     
     <a class="button" href="./horaires.php">Gestion des horaires</a>
-    <a class="button" href="./Events.php">Gestion des Events</a>
+    <a class="button" href="./events.php">Gestion des Events</a>
     <a class="button" href="./reservations.php">Suppression des réservations</a>
     <!-- <a class="button" href="./staff.php">Gestion du Staff</a> -->
     <!-- add footer -->
