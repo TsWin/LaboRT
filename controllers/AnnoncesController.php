@@ -137,7 +137,7 @@ function getTypes() {
 
 function getConditions() {
     $connex = connectDB();
-    $query = $connex->prepare("SELECT * FROM condition");
+    $query = $connex->prepare("SELECT * FROM `condition`");
     $query->execute();
     $conditions = $query->fetchAll();
     return $conditions;
